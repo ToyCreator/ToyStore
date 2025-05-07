@@ -1,6 +1,7 @@
 import React from 'react'
 import './main-layout.css'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { Outlet } from 'react-router';
 export default function MainLayOut () {
   return (
     <div>
@@ -49,15 +50,13 @@ export default function MainLayOut () {
                   <div className="cart">Cart</div>
                   <ShoppingCartOutlinedIcon style={{ color: 'black', margin: ' 0 10px' }} />
                   <div className="item-count">0</div>
-
                 </a>
-
               </div>
-
             </div>
           </div>
         </div>
       </div>
+      <Outlet />
     </div>
   )
 }
