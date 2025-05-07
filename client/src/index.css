@@ -10,3 +10,58 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* 共用section */
+.section {
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 0px;
+}
+
+/* 背景灰色 */
+.haze {
+  background-color: #f8f8f8;
+}
+
+/* // 共用h3 */
+h3 {
+  margin-top: 0px;
+  margin-bottom: 16px;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 28px;
+  line-height: 36px;
+  font-weight: 500;
+}
+
+h6 {
+  margin-top: 0px;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+* {
+
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* // 共用wapper */
+.wapper {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* // 共用h1 */
+h1 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 500;
+}

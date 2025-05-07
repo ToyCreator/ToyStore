@@ -43,12 +43,12 @@ export default function Home () {
       </div>
       <div className='section haze'>
         <div className='wapper'>
-          <ShowList />
+          <ShowList title='Stuffed Animal' type='stuffed-animal' />
         </div>
       </div>
       <div className='section haze ' style={{ paddingBottom: '120px' }}>
         <div className='wapper'>
-          <ShowList />
+          <ShowList title='Wooden Toys' type='wooden-toy' />
         </div>
       </div>
       <div className='section video-section haze'>
@@ -135,7 +135,7 @@ export default function Home () {
               <img src="https://cdn.prod.website-files.com/5badda2935e11303a89a461e/5badecf71f2da2228d17155f_instagram-06.jpg" alt="" />
             </a>
           </div>
-          <a href="https://instagram.com" target="_blank" className="w-button">See More Photos</a>
+          <a href="https://instagram.com" target="_blank" className="w-button-ins">See More Photos</a>
         </div>
       </div>
       <div className='section color no-padding-top' style={{ paddingTop: '0px' }}>

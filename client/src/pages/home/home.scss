@@ -1,57 +1,57 @@
-* {
+// * {
 
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+//   padding: 0;
+//   margin: 0;
+//   box-sizing: border-box;
+// }
 
-// 共用wapper
-.wapper {
-  max-width: 1200px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
+// // 共用wapper
+// .wapper {
+//   max-width: 1200px;
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+// }
 
-// 共用h1
-h1 {
-  margin-top: 0px;
-  margin-bottom: 20px;
-  font-family: 'Varela Round', sans-serif;
-  font-size: 40px;
-  line-height: 48px;
-  font-weight: 500;
-}
+// // 共用h1
+// h1 {
+//   margin-top: 0px;
+//   margin-bottom: 20px;
+//   font-family: 'Varela Round', sans-serif;
+//   font-size: 40px;
+//   line-height: 48px;
+//   font-weight: 500;
+// }
 
 // 共用h3
-h3 {
-  margin-top: 0px;
-  margin-bottom: 16px;
-  font-family: 'Varela Round', sans-serif;
-  font-size: 28px;
-  line-height: 36px;
-  font-weight: 500;
-}
+// h3 {
+//   margin-top: 0px;
+//   margin-bottom: 16px;
+//   font-family: 'Varela Round', sans-serif;
+//   font-size: 28px;
+//   line-height: 36px;
+//   font-weight: 500;
+// }
 
-h6 {
-  margin-top: 0px;
-  font-family: 'Varela Round', sans-serif;
-  font-size: 15px;
-  line-height: 20px;
-  font-weight: 400;
-}
+// h6 {
+//   margin-top: 0px;
+//   font-family: 'Varela Round', sans-serif;
+//   font-size: 15px;
+//   line-height: 20px;
+//   font-weight: 400;
+// }
 
 // 共用section
-.section {
-  display: flex;
-  justify-content: center;
-  padding: 120px 24px 0px;
-}
+// .section {
+//   display: flex;
+//   justify-content: center;
+//   padding: 120px 24px 0px;
+// }
 
 // 背景灰色
-.haze {
-  background-color: #f8f8f8;
-}
+// .haze {
+//   background-color: #f8f8f8;
+// }
 
 
 // nav导航父级
@@ -101,6 +101,17 @@ h6 {
   }
 }
 
+/* 淡入动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 .hero-intro {
   display: flex;
   flex-direction: column;
@@ -113,6 +124,7 @@ h6 {
   color: #111;
   text-align: center;
   box-sizing: border-box;
+  animation: fadeIn 1s ease forwards;
 
   // transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
   // opacity: 1;
@@ -171,6 +183,7 @@ h6 {
     position: relative;
     display: flex;
     flex: 1;
+    animation: fadeIn 1s ease forwards;
 
     .home-category-image-1 {
       position: absolute;
@@ -480,7 +493,7 @@ h6 {
       font-size: 14px;
       line-height: 1.42857143;
       color: #333333;
-      vertical-align: middle;
+      // vertical-align: middle;
 
       &:focus {
         border-color: #a5c926;
@@ -527,7 +540,7 @@ h6 {
 
   a {
     max-width: 100%;
-    display: inline-block;
+    display: flex;
     position: relative;
     overflow: hidden;
     margin-right: 8px;
@@ -552,7 +565,7 @@ h6 {
 
 }
 
-.w-button {
+.w-button-ins {
   height: 48px;
   padding: 12px 28px;
   -webkit-box-pack: center;

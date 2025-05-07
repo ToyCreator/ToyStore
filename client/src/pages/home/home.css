@@ -1,52 +1,4 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-.wapper {
-  max-width: 1200px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-h1 {
-  margin-top: 0px;
-  margin-bottom: 20px;
-  font-family: 'Varela Round', sans-serif;
-  font-size: 40px;
-  line-height: 48px;
-  font-weight: 500;
-}
-
-h3 {
-  margin-top: 0px;
-  margin-bottom: 16px;
-  font-family: 'Varela Round', sans-serif;
-  font-size: 28px;
-  line-height: 36px;
-  font-weight: 500;
-}
-
-h6 {
-  margin-top: 0px;
-  font-family: 'Varela Round', sans-serif;
-  font-size: 15px;
-  line-height: 20px;
-  font-weight: 400;
-}
-
-.section {
-  display: flex;
-  justify-content: center;
-  padding: 120px 24px 0px;
-}
-
-.haze {
-  background-color: #f8f8f8;
-}
-
+@charset "UTF-8";
 .home-banner {
   position: relative;
   top: 104px;
@@ -92,6 +44,16 @@ h6 {
   margin-top: 6px;
 }
 
+/* 淡入动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .hero-intro {
   display: flex;
   flex-direction: column;
@@ -104,6 +66,7 @@ h6 {
   color: #111;
   text-align: center;
   box-sizing: border-box;
+  animation: fadeIn 1s ease forwards;
 }
 
 .hero-intro .title {
@@ -160,6 +123,7 @@ h6 {
   position: relative;
   display: flex;
   flex: 1;
+  animation: fadeIn 1s ease forwards;
 }
 
 .home-categories .home-category-card .home-category-image-1 {
@@ -468,7 +432,6 @@ h6 {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
-  vertical-align: middle;
 }
 
 .subscribe .subscribe-form-wrapper .subscribe-input:focus {
@@ -514,7 +477,7 @@ h6 {
 
 .instagram a {
   max-width: 100%;
-  display: inline-block;
+  display: flex;
   position: relative;
   overflow: hidden;
   margin-right: 8px;
@@ -536,7 +499,7 @@ h6 {
   width: 100%;
 }
 
-.w-button {
+.w-button-ins {
   height: 48px;
   padding: 12px 28px;
   -webkit-box-pack: center;
@@ -558,7 +521,7 @@ h6 {
   margin-bottom: 100px;
 }
 
-.w-button:hover {
+.w-button-ins:hover {
   box-shadow: 0 8px 8px -4px rgba(17, 17, 17, 0.2);
   transform: scale(1.05);
   text-decoration: none;

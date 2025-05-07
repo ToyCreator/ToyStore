@@ -119,3 +119,28 @@
   line-height: 20px;
   font-weight: 500;
 }
+
+.shop-categories-wrapper a {
+  display: inline-block;
+  height: 32px;
+  padding: 6px 18px;
+  border-radius: 16px;
+  color: #111;
+  font-size: 13px;
+  line-height: 20px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.shop-categories-wrapper a:hover {
+  text-decoration: underline;
+}
+
+.shop-categories-wrapper .filter-btn {
+  background-color: #a5c926;
+  color: #fff;
+}
+
+.shop-categories-wrapper .filter-btn:hover {
+  text-decoration: none;
+}

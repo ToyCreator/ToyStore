@@ -7,6 +7,8 @@ const Home = lazy(() => import("../pages/home/Home"));
 // const Login = lazy(() => import("@/features/auth/pages/Login"));
 // const Dashboard = lazy(() => import("@/pages/Dashboard"));
 const NotFound = lazy(() => import("../pages/notFound/NotFound"));
+const Catalog = lazy(() => import("../pages/catalog/Catalog"));
+const ProductDetail = lazy(() => import("../components/ProductDetail/ProductDetail"));
 
 const routerList = [
   {
@@ -20,10 +22,21 @@ const routerList = [
         path: "/home",
         element: <Home />,
       },
-      // {
-      //   path: "/dashboard",
-      //   element: <Dashboard />,
-      // },
+      {
+        path: "/catalog",
+        element: <Catalog />,
+        // children: [
+        //   {
+        //     path: 'product/:name',
+        //     element: <ProductDetail />,
+        //   }
+        // ]
+      },
+      {
+        path: 'product/:name',
+        element: <ProductDetail />,
+      },
+
     ],
   },
   {
