@@ -18,7 +18,7 @@ let dataList= [
       url: 'https://cdn.prod.website-files.com/5baddb6a35e113da0e9a4802/5bae124e03ef144f2b4a9bef_33837-2-plush-toy-transparent-background-min-p-500.png',
       title:'Mega Plush Toy',
       price: '$ 38.00 USD',
-       type:''
+       type:'related-product'
     },
     {
       id:'4',
@@ -39,7 +39,7 @@ let dataList= [
       url: 'https://cdn.prod.website-files.com/5baddb6a35e113da0e9a4802/5baf522457091399591a83fe_33631-9-wooden-toy-photo-min-p-500.png',
       title:'Wooden Camera',
       price: '$ 32.00 USD',
-      type:''
+      type:'related-product'
     },
     {
       id:'7',
@@ -61,35 +61,35 @@ let dataList= [
       url: 'https://cdn.prod.website-files.com/5baddb6a35e113da0e9a4802/5bae0ede56ac5481f54e12e9_33610-4-plush-toy-hd-min-p-500.png',
       title:'Christmas Deer',
       price: '$ 19.00 USD',
-       type:''
+       type:'related-product'
     },
     {
       id:'10',
       url: 'https://cdn.prod.website-files.com/5baddb6a35e113da0e9a4802/5baf51b7c8d851a73cc4544c_33649-6-toy-transparent-image-min-p-500.png',
       title:'Rainbow Truck',
       price: '$ 28.00 USD',
-       type:''
+       type:'related-product'
     },
     {
       id:'11',
       url: 'https://cdn.prod.website-files.com/5baddb6a35e113da0e9a4802/5bae0e6335e113da999a7976_33568-4-toy-image-min-p-500.png',
       title:'Pluto Yellow Dog',
       price: '$ 28.00 USD',
-       type:''
+       type:'related-product'
     },
     {
       id:'12',
       url: 'https://cdn.prod.website-files.com/5baddb6a35e113da0e9a4802/5baf5171ace69cb064b33d42_33388-1-wooden-toy-photos-min-p-500.png',
       title:'Happy Dog',
       price: '$ 30.00 USD',
-      type:''
+      type:'related-product'
     },
     {
       id:'13',
       url: 'https://cdn.prod.website-files.com/5baddb6a35e113da0e9a4802/5baf50843a685ea7dfd6e4fd_33371-3-wooden-toy-min-p-500.png',
       title:'Caterpillar',
       price: '$ 30.00 USD',
-      type:''
+      type:'related-product'
     },
     {
       id:'14',
@@ -110,7 +110,7 @@ let dataList= [
       url: 'https://cdn.prod.website-files.com/5baddb6a35e113da0e9a4802/5bae0d07939555eac3b8a91c_33910-6-toy-clipart-min-p-500.png',
       title:'Funny Clown',
       price: '$ 30.00 USD',
-      type:''
+      type:'related-product'
     },
   ]
 

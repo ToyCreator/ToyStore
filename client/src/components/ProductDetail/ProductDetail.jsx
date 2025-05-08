@@ -1,7 +1,32 @@
-import React from 'react'
+import React, { useState } from 'react'
 import BreadcrumbAntd from '../Breadcrumb/BreadcrumbAntd'
+import ShowList from '../ShowList/ShowList'
+import Footer from '../Footer/Footer'
+import CartModal from '../CartModal/CartModal'
 import './product-detail.css'
+
+const product = {
+  id: '14',
+  url: 'https://cdn.prod.website-files.com/5baddb6a35e113da0e9a4802/5bae0db61f2da2a4ef173617_cute-plush-toy-stuffed-animal-47335-min-p-500.png',
+  title: 'Grey Elephant',
+  price: '$ 18.00 USD',
+  type: 'stuffed-animal'
+};
+
 export default function ProductDetail () {
+  const [cartItems, setCartItems] = useState([]);
+  const [showCart, setShowCart] = useState(false);
+
+  const addToCart = (item) => {
+    setCartItems((prev) => [...prev, item]);
+    setShowCart(true); // 添加后立即显示购物车
+  };
+
+  const removeFromCart = (index) => {
+    const newCart = [...cartItems];
+    newCart.splice(index, 1);
+    setCartItems(newCart);
+  };
   return (
     <div>
       <div className='section haze'>
@@ -22,16 +47,25 @@ export default function ProductDetail () {
                 <form className="add-to-cart">
                   <input type="number" min="1" className=" quantity-input" placeholder='0' />
                   <div className="buy-buttons">
-                    <input type="submit" className=" add-to-cart-button" value="Add to Cart" />
+                    <input type="button" className=" add-to-cart-button" value="Add to Cart" onClick={() => addToCart(product)} />
+                    <div style={{ position: 'fixed', top: '200px', zIndex: '99' }}>
+                      <CartModal
+                        visible={showCart}
+                        onClose={() => setShowCart(false)}
+                        cartItems={cartItems}
+                        onRemove={removeFromCart}
+                      />
+                    </div>
+
                     {/* <a className="w-commerce-commercebuynowbutton button buy-now-button w-dyn-hide" href="/checkout">Buy now</a> */}
                   </div>
                 </form>
-                <div style={{ display: "none" }} className="out-of-stock" tabindex="0">
+                {/* <div style={{ display: "none" }} className="out-of-stock" tabindex="0">
                   <div>This product is out of stock.</div>
                 </div>
                 <div style={{ display: "none" }} className="form-error">
                   <div>Product is not available in this quantity.</div>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="product-image-wrapper">
@@ -105,6 +139,41 @@ export default function ProductDetail () {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="section  haze">
+        <div className='wapper'>
+          <ShowList title='Related Products' type='related-product' />
+        </div>
+      </div>
+      <div className='section haze'>
+        <div className='wapper' style={{ paddingBottom: '100px' }}>
+          <div className="subscribe">
+            <div className="subscribe-info">
+              <div className="subscribe-icon">
+                <img src="https://cdn.prod.website-files.com/5badda2935e11303a89a461e/5baf56dcace69cfd39b34f7a_paperplane-icon-white.svg" alt="" />
+              </div>
+              <h4>Subscribe to our newsletter<br />&amp; get <span className="text-green">10% discount!</span>
+              </h4>
+            </div>
+            <div className="subscribe-form-wrapper">
+              <form id="wf-form-Subscribe-Form" name="wf-form-Subscribe-Form" data-name="Subscribe Form" method="get" className="subscribe-form" >
+                <input className=" subscribe-input" maxLength="256" name="email-2" placeholder="Enter your email address" type="email" id="email-2" required="" />
+                <input type="submit" data-wait="Please wait..." className="button" value="Subscribe" />
+              </form>
+              <div className="form-success w-form-button">
+                <div>Thank you! Your submission has been received!</div>
+              </div>
+              <div className="form-error w-form-button">
+                <div>Oops! Something went wrong while submitting the form.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='section color no-padding-top' >
+        <div className='wapper'>
+          <Footer />
         </div>
       </div>
     </div>
