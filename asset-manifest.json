@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ToyStore/static/css/main.9e8dd6a0.css",
-    "main.js": "/ToyStore/static/js/main.cfbe1340.js",
+    "main.js": "/ToyStore/static/js/main.be4e1fbf.js",
     "static/css/648.8b381cfc.chunk.css": "/ToyStore/static/css/648.8b381cfc.chunk.css",
     "static/js/648.1f6946f0.chunk.js": "/ToyStore/static/js/648.1f6946f0.chunk.js",
     "static/js/848.2bc639cd.chunk.js": "/ToyStore/static/js/848.2bc639cd.chunk.js",
@@ -14,7 +14,7 @@
     "static/js/482.c97a08cd.chunk.js": "/ToyStore/static/js/482.c97a08cd.chunk.js",
     "index.html": "/ToyStore/index.html",
     "main.9e8dd6a0.css.map": "/ToyStore/static/css/main.9e8dd6a0.css.map",
-    "main.cfbe1340.js.map": "/ToyStore/static/js/main.cfbe1340.js.map",
+    "main.be4e1fbf.js.map": "/ToyStore/static/js/main.be4e1fbf.js.map",
     "648.8b381cfc.chunk.css.map": "/ToyStore/static/css/648.8b381cfc.chunk.css.map",
     "648.1f6946f0.chunk.js.map": "/ToyStore/static/js/648.1f6946f0.chunk.js.map",
     "848.2bc639cd.chunk.js.map": "/ToyStore/static/js/848.2bc639cd.chunk.js.map",
@@ -28,6 +28,6 @@
   },
   "entrypoints": [
     "static/css/main.9e8dd6a0.css",
-    "static/js/main.cfbe1340.js"
+    "static/js/main.be4e1fbf.js"
   ]
 }
