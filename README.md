@@ -31,5 +31,5 @@ Toystore 是一个全栈电子商务平台，分为前端和后端两部分，�
 首先，克隆这个仓库到本地：
 
 ```bash
-git clone https://github.com/yourusername/toystore.git
+git clone https://github.com/ToyCreator/toystore.git
 cd toystore
