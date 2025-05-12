@@ -15,11 +15,14 @@ const app = express();
 
 // Middleware
 app.use(express.json());  // Parse JSON data
-app.use(errorMiddleware);
 
 // Routes
 app.use('/api/users', userRoutes);
 app.use('/api/products', productRoutes);
+
+
+
+app.use(errorMiddleware);
 
 // Start server
 const PORT = process.env.PORT || 5000;
