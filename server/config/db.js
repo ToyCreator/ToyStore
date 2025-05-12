@@ -2,10 +2,13 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(process.env.MONGO_URI
+      // 你在连接 MongoDB 时使用了已废弃的选项useUnifiedTopology，useNewUrlParser
+      // , {
+      // useNewUrlParser: true,
+      // useUnifiedTopology: true,
+      // }
+    );
     console.log('MongoDB Connected');
   } catch (err) {
     console.error(err);
