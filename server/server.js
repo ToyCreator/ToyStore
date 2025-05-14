@@ -1,10 +1,10 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
-const userRoutes = require('./routes/userRoutes');
+const adminRoutes = require('./routes/adminRoute');
 const productRoutes = require('./routes/productRoutes');
 const errorMiddleware = require('./middleware/errorMiddleware');
-
+const cors = require('cors');
 // Load environment variables
 dotenv.config();
 // console.log(process.env.MONGO_URI)
@@ -12,12 +12,12 @@ dotenv.config();
 connectDB();
 
 const app = express();
-
+app.use(cors());
 // Middleware
 app.use(express.json());  // Parse JSON data
 
 // Routes
-app.use('/api/users', userRoutes);
+app.use('/api/admin', adminRoutes);
 app.use('/api/products', productRoutes);
 
 

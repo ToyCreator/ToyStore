@@ -1,57 +1,44 @@
-import { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const AdminLogin = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [form, setForm] = useState({ username: '', password: '' });
   const navigate = useNavigate();
 
-  // const handleLogin = async () => {
-  //   try {
-  //     const res = await fetch('/api/admin/login', {
-  //       method: 'POST',
-  //       headers: { 'Content-Type': 'application/json' },
-  //       body: JSON.stringify({ username, password }),
-  //     });
+  const handleLogin = async (e) => {
+    e.preventDefault();
 
-  //     if (!res.ok) {
-  //       throw new Error('登录失败');
-  //     }
+    try {
+      const res = await fetch('http://localhost:5001/api/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form)
+      });
 
-  //     const data = await res.json();
-  //     localStorage.setItem('adminToken', data.token);
-  //     navigate('/admin/dashboard');
-  //   } catch (err) {
-  //     alert(err.message);
-  //   }
-  // };
+      const data = await res.json();
 
-
-  // 模拟登录成功
-  const location = useLocation();
-  const from = location.state?.from?.pathname || "/admin/dashboard";
-  const handleLogin = () => {
-    // 模拟登录
-    localStorage.setItem("token", "fake-jwt-token");
-    navigate(from, { replace: true });
+      if (res.ok && data.token) {
+        localStorage.setItem('adminToken', data.token);
+        navigate('/admin/dashboard');
+      } else {
+        alert(data.message || '登录失败');
+      }
+    } catch (error) {
+      alert('服务器连接失败');
+      console.error('登录错误', error);
+    }
   };
 
-
   return (
-    <div style={{ padding: 40 }}>
-      <h2>后台登录</h2>
-      <input
-        placeholder="用户名"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      /><br />
-      <input
-        type="password"
-        placeholder="密码"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      /><br />
-      <button onClick={handleLogin}>登录</button>
+    <div className="container mt-5" style={{ maxWidth: '400px' }}>
+      <h3>管理员登录</h3>
+      <form onSubmit={handleLogin}>
+        <input className="form-control mb-3" placeholder="用户名" value={form.username}
+          onChange={e => setForm({ ...form, username: e.target.value })} />
+        <input className="form-control mb-3" type="password" placeholder="密码" value={form.password}
+          onChange={e => setForm({ ...form, password: e.target.value })} />
+        <button className="btn btn-primary w-100">登录</button>
+      </form>
     </div>
   );
 };

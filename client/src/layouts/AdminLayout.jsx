@@ -1,21 +1,48 @@
 // layouts/AdminLayout.jsx
 import { NavLink, Outlet } from 'react-router-dom';
+import { Container, Row, Col, Nav } from 'react-bootstrap';
 
 const AdminLayout = () => {
   return (
-    <div style={{ display: 'flex', height: '100vh' }}>
-      <aside style={{ width: '200px', background: '#f4f4f4', padding: '20px' }}>
-        <h2>后台管理</h2>
-        <nav>
-          <NavLink to="/admin/dashboard">仪表盘</NavLink><br />
-          <NavLink to="/admin/products">商品管理</NavLink><br />
-          <NavLink to="/admin/users">用户管理</NavLink><br />
-        </nav>
-      </aside>
-      <main style={{ flex: 1, padding: '20px' }}>
-        <Outlet />
-      </main>
-    </div>
+    <Container fluid>
+      <Row className="min-vh-100">
+        {/* 侧边栏 */}
+        <Col xs={12} md={3} lg={2} className="bg-light border-end p-3">
+          <h4 className="mb-4">后台管理</h4>
+          <Nav className="flex-column">
+            {/* <NavLink
+              to="/admin/dashboard"
+              className={({ isActive }) =>
+                `nav-link ${isActive ? 'fw-bold text-primary' : 'text-dark'}`
+              }
+            >
+              仪表盘
+            </NavLink> */}
+            <NavLink
+              to="/admin/products"
+              className={({ isActive }) =>
+                `nav-link ${isActive ? 'fw-bold text-primary' : 'text-dark'}`
+              }
+            >
+              商品管理
+            </NavLink>
+            <NavLink
+              to="/admin/users"
+              className={({ isActive }) =>
+                `nav-link ${isActive ? 'fw-bold text-primary' : 'text-dark'}`
+              }
+            >
+              用户管理
+            </NavLink>
+          </Nav>
+        </Col>
+
+        {/* 主内容区 */}
+        <Col xs={12} md={9} lg={10} className="p-4 bg-white">
+          <Outlet />
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

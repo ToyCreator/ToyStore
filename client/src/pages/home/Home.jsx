@@ -2,6 +2,7 @@ import React from 'react'
 import './home.css'
 import ShowList from '../../components/ShowList/ShowList'
 import Footer from '../../components/Footer/Footer'
+import { Link } from 'react-router-dom';
 export default function Home () {
   return (
     <div>
@@ -10,16 +11,17 @@ export default function Home () {
           <div className='hero-intro'>
             <div className='title'>Say Hello to ToyStore!</div>
             <h1>Free Ecommerce Template for Webflow</h1>
-            <a href="/catalog" className="w-button button">Open Catalog</a>
+            <Link to="/catalog" className="w-button button">Open Catalog</Link>
           </div>
         </div>
-        <a href="" className='scroll-mouse-link'>
+        {/* //锚点跳转 */}
+        <a className='scroll-mouse-link' onClick={() => document.getElementById('middleSection')?.scrollIntoView({ behavior: 'smooth' })}>
           <div className='mouse-icon'>
             <div className="mouse-wheel-icon"></div>
           </div>
         </a>
       </div>
-      <div className='section haze'>
+      <div className='section haze' id='middleSection'>
         <div className='wapper'>
           <div className="home-categories">
             <div className="home-category-card"  >
@@ -27,7 +29,7 @@ export default function Home () {
                 alt="" className="home-category-image-1" />
               <div className="home-category-info-1">
                 <h3>Stuffed Animals</h3>
-                <a href="/catalog" className="w-button button">Shop Now</a>
+                <Link to="/catalog" className="w-button button">Shop Now</Link>
               </div>
             </div>
             <div className="home-category-card red-card">
@@ -35,7 +37,8 @@ export default function Home () {
                 alt="" className="home-category-image-2" />
               <div className="home-category-info-2">
                 <h3>Wooden Toys</h3>
-                <a href="/catalog" className="w-button button">Shop Now</a>
+                {/* <a href="/catalog" className="w-button button">Shop Now</a> */}
+                <Link to="/catalog" className="w-button button">Shop Now</Link>
               </div>
             </div>
           </div>
@@ -57,7 +60,7 @@ export default function Home () {
             <div className="title">About The Shop</div>
             <h2 className="heading">Watch Our Story</h2>
             <p>There is no magic formula to write perfect ad copy. It is based on a number of factors, including ad placement, demographic, even the consumer’s mood.</p>
-            <a href="" className='play-button'>
+            <a href="#" className='play-button'>
               <img src="https://cdn.prod.website-files.com/5badda2935e11303a89a461e/5bae5eec4b504f1c4031af32_play-icon-white.svg" alt="" />
             </a>
           </div>
@@ -95,8 +98,8 @@ export default function Home () {
               </h4>
             </div>
             <div className="subscribe-form-wrapper">
-              <form id="wf-form-Subscribe-Form" name="wf-form-Subscribe-Form" data-name="Subscribe Form" method="get" className="subscribe-form" >
-                <input className=" subscribe-input" maxlength="256" name="email-2" placeholder="Enter your email address" type="email" id="email-2" required="" />
+              <form method="get" className="subscribe-form" >
+                <input className=" subscribe-input" maxlength="256" placeholder="Enter your email address" type="email" />
                 <input type="submit" data-wait="Please wait..." className="button" value="Subscribe" />
               </form>
               <div className="form-success w-form-button">
@@ -116,22 +119,22 @@ export default function Home () {
             <h2>We're on Instagram!</h2>
           </div>
           <div className="instagram">
-            <a href="">
+            <a href="https://www.instagram.com/">
               <img src="https://cdn.prod.website-files.com/5badda2935e11303a89a461e/5badecf79395558fbeb88a49_instagram-01.jpg" alt="" />
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/">
               <img src="https://cdn.prod.website-files.com/5badda2935e11303a89a461e/5badecf735e113f8679a57e6_instagram-02.jpg" alt="" />
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/">
               <img src="https://cdn.prod.website-files.com/5badda2935e11303a89a461e/5badecf735e11327b99a57e7_instagram-03.jpg" alt="" />
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/">
               <img src="https://cdn.prod.website-files.com/5badda2935e11303a89a461e/5badecf7939555df08b88a48_instagram-04.jpg" alt="" />
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/">
               <img src="https://cdn.prod.website-files.com/5badda2935e11303a89a461e/5badecf7939555514eb88a4a_instagram-05.jpg" alt="" />
             </a>
-            <a href="">
+            <a href="https://www.instagram.com/">
               <img src="https://cdn.prod.website-files.com/5badda2935e11303a89a461e/5badecf71f2da2228d17155f_instagram-06.jpg" alt="" />
             </a>
           </div>
